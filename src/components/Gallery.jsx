@@ -10,11 +10,11 @@ const srcset = (image, size, rows = 1, cols = 1) => {
   };
 };
 
-const Gallery = ({ photos }) => {
+const Gallery = ({ photos, term }) => {
   return (
     <>
-      <Typography variant="h4" component="h2" mb={3}>
-        Random
+      <Typography variant="h5" component="h2" mb={3} textTransform="capitalize" sx={{ opacity: .8 }}>
+        {term}
       </Typography>
 
       <ImageList variant="quilted" cols={4} rowHeight={121}>
