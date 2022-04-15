@@ -72,11 +72,11 @@ const App = () => {
     <div className="App">
 
       <Container className='_wrapper' maxWidth="md" sx={{ padding: { sm: "40px", } }}>
-        <Header searchVal={searchVal} />
 
+        <Header searchVal={searchVal} setSearchVal={setSearchVal} />
         <Divider sx={{ margin: "24px 0" }} />
-
         <Gallery photos={photos} />
+
       </Container>
 
       <Footer />

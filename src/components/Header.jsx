@@ -8,7 +8,7 @@ const Header = (props) => {
                 <a href="/">Photo<span>Gallery</span></a>
             </Typography>
 
-            <SearchForm searchVal={props.searchVal} />
+            <SearchForm searchVal={props.searchVal} setSearchVal={props.setSearchVal} />
             <CategoryList />
         </header>
     )
