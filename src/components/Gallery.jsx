@@ -2,14 +2,6 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Typography from "@mui/material/Typography";
 
-const srcset = (image, size, rows = 1, cols = 1) => {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${size * rows
-      }&fit=crop&auto=format&dpr=2 2x`,
-  };
-};
-
 const Gallery = ({ photos, term }) => {
   return (
     <>
@@ -17,16 +9,12 @@ const Gallery = ({ photos, term }) => {
         {term}
       </Typography>
 
-      <ImageList variant="quilted" cols={4} rowHeight={121}>
+      <ImageList cols={4} gap={6}>
         {photos.map((item) => (
-          <ImageListItem
-            key={item.img}
-            cols={item.cols || 1}
-            rows={item.rows || 1}
-          >
+          <ImageListItem key={item.id}>
             <img
-              {...srcset(item.img, 121, item.rows, item.cols)}
-              alt={item.title}
+              src={item.urls.regular}
+              alt={item.description}
               loading="lazy"
             />
           </ImageListItem>
