@@ -1,10 +1,12 @@
 import { IconButton, FormControl, OutlinedInput, InputAdornment } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search'
 
-const SearchForm = ({ searchVal, setSearchVal }) => {
-    const onformSubmit = (e) => {
+const SearchForm = ({ searchTerm, setSearchTerm, getPhotos }) => {
+    const onformSubmit = e => {
         e.preventDefault()
-        console.log(searchVal);
+        getPhotos(searchTerm)
+        // Reset Form
+        setSearchTerm("")
     }
 
     return (
@@ -13,12 +15,14 @@ const SearchForm = ({ searchVal, setSearchVal }) => {
                 <OutlinedInput
                     id="search-input"
                     placeholder="Search..."
-                    value={searchVal}
-                    onChange={e => setSearchVal(e.target.value)}
                     size="small"
                     sx={{ p: 0, overflow: 'hidden' }}
+                    required
+                    value={searchTerm}
+                    onChange={e => setSearchTerm(e.target.value)}
+
                     endAdornment={
-                        <InputAdornment position="end">
+                        <InputAdornment position="end" sx={{ m: 0 }}>
                             <IconButton type="submit"
                                 sx={{
                                     width: "55px",
@@ -40,7 +44,5 @@ const SearchForm = ({ searchVal, setSearchVal }) => {
         </form>
     )
 }
-
-
 
 export default SearchForm

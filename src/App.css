@@ -32,19 +32,18 @@ img {
 
 /* App */
 .App {
-  padding: 24px 12px;
+  padding: 36px 10px;
 }
 ._wrapper {
   padding: 24px 12px;
   text-align: center;
   background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(8px);
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.075);
 }
 
 header {
-  padding: 12px 0 4px;
+  padding: 16px 0 4px;
   /* margin-bottom: 12px; */
 }
 
