@@ -9,7 +9,7 @@ const Footer = () => {
             <p>
                 Created with React.js by{" "}
                 <a
-                    href="http://yusufdaudu.tech"
+                    href="https://yusufdaudu.tech"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -22,13 +22,13 @@ const Footer = () => {
                 spacing={2}
                 sx={{ p: "20px 6px 0", justifyContent: "center" }}
             >
-                <a href="http://instagram" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com/dycodes" target="_blank" rel="noopener noreferrer">
                     <InstagramIcon />
                 </a>
-                <a href="http://instagram" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/dycodes" target="_blank" rel="noopener noreferrer">
                     <TwitterIcon />
                 </a>
-                <a href="http://instagram" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/yusuf-daudu-tech" target="_blank" rel="noopener noreferrer">
                     <LinkedinIcon />
                 </a>
             </Stack>
