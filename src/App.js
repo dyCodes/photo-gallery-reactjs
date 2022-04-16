@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
+import { CircularProgress, Container, Divider, Typography } from "@mui/material";
 import './App.css';
-import { Container, Divider } from "@mui/material";
 import Footer from "./components/Foooter";
 import Header from "./components/Header";
 import Gallery from "./components/Gallery";
@@ -12,6 +12,7 @@ const client_id = "Xhp7L8NIlvsE3R3Ue7rwbyivRAkjgi9gI1RZUV_bCkg"
 const App = () => {
   const [term, setTerm] = useState("Random")
   const [searchTerm, setSearchTerm] = useState("")
+  const [loading, setLoading] = useState(true)
   const [photos, setPhotos] = useState([])
 
   useEffect(() => {
@@ -20,19 +21,26 @@ const App = () => {
       .get(baseURL + `/photos?page=1&per_page=20&client_id=${client_id}`)
       .then(res => {
         setPhotos(res.data)
-        console.log("1st Run Axios: ")
-        console.log(res.data);
+        // Hide preloader after 1s
+        setTimeout(() => {
+          setLoading(false)
+        }, 1000);
+        // console.log("1st Run Axios: ")
       })
   }, [])
 
   const getPhotos = (query) => {
     // Fetch photos
+    setLoading(true)
     axios
       .get(baseURL + `/search/photos?query=${query}&per_page=20&client_id=${client_id}`)
       .then(res => {
         setPhotos(res.data.results)
         setTerm(query)
-        console.log(res.data.results);
+        // Hide preloader after 1s
+        setTimeout(() => {
+          setLoading(false)
+        }, 1000);
       })
   }
 
@@ -44,11 +52,18 @@ const App = () => {
 
         <Divider sx={{ margin: "20px 0" }} />
 
-        <Gallery photoList={photos} term={term} />
+        <Typography variant="h5" component="h2" mb={3} textTransform="capitalize" sx={{ opacity: .8 }}>
+          {term}
+        </Typography>
+
+        {loading ? (
+          <CircularProgress sx={{ m: '98px 0' }} />
+        ) : (
+          <Gallery photoList={photos} term={term} />
+        )}
       </Container>
 
       <Footer />
-
     </div>
   );
 }
