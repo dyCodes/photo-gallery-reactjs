@@ -8,7 +8,7 @@ https://dycodes.github.io/photo-gallery-reactjs/
 
 ## Screenshot
 
-<img src="https://raw.githubusercontent.com/screenshot.png" alt="screenshot" width="380"/>
+<img src="https://raw.githubusercontent.com/dyCodes/photo-gallery-reactjs/main/public/screenshot.png" alt="screenshot" width="360"/>
 
 ## API
 
