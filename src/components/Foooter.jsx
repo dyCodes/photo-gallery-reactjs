@@ -6,22 +6,12 @@ import LinkedinIcon from '@mui/icons-material/LinkedIn'
 const Footer = () => {
     return (
         <footer>
-            <p>
-                Created with React.js by{" "}
-                <a
-                    href="https://yusufdaudu.tech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+            <p>Created with React.js by{" "}
+                <a href="https://github.com/dyCodes" target="_blank" rel="noopener noreferrer">
                     Yusuf Daudu
                 </a>
             </p>
-            {/* Social Links */}
-            <Stack
-                direction="row"
-                spacing={2}
-                sx={{ p: "20px 6px 0", justifyContent: "center" }}
-            >
+            <Stack direction="row" spacing={2} sx={{ p: "20px 6px 0", justifyContent: "center" }}>
                 <a href="https://instagram.com/dycodes" target="_blank" rel="noopener noreferrer">
                     <InstagramIcon />
                 </a>
