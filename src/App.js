@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { CircularProgress, Container, Divider, Typography } from "@mui/material";
 import './App.css';
+import axios from 'axios';
+import { CircularProgress, Container, Divider, Typography } from "@mui/material";
 import Footer from "./components/Foooter";
 import Header from "./components/Header";
 import Gallery from "./components/Gallery";
-import axios from 'axios';
 
+// API INFO
 const baseURL = "https://api.unsplash.com"
 const client_id = "Xhp7L8NIlvsE3R3Ue7rwbyivRAkjgi9gI1RZUV_bCkg"
 
@@ -25,7 +26,6 @@ const App = () => {
         setTimeout(() => {
           setLoading(false)
         }, 1000);
-        // console.log("1st Run Axios: ")
       })
   }, [])
 
@@ -51,7 +51,6 @@ const App = () => {
         <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} term={term} getPhotos={getPhotos} />
 
         <Divider sx={{ margin: "20px 0" }} />
-
         <Typography variant="h5" component="h2" mb={3} textTransform="capitalize" sx={{ opacity: .8 }}>
           {term}
         </Typography>
@@ -62,7 +61,6 @@ const App = () => {
           <Gallery photoList={photos} term={term} />
         )}
       </Container>
-
       <Footer />
     </div>
   );
