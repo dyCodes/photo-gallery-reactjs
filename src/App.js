@@ -30,6 +30,7 @@ const App = () => {
   }, [])
 
   const getPhotos = (query) => {
+    window.location.href = `/#${query}`;
     // Fetch photos
     setLoading(true)
     axios

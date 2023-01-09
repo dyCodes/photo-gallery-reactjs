@@ -4,9 +4,7 @@ import SearchIcon from '@mui/icons-material/Search'
 const SearchForm = ({ searchTerm, setSearchTerm, getPhotos }) => {
     const onformSubmit = e => {
         e.preventDefault()
-        getPhotos(searchTerm)
-        // Reset Form
-        setSearchTerm("")
+		getPhotos(searchTerm.trim());
     }
 
     return (
