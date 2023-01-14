@@ -1,10 +1,10 @@
 ## About
 
-Photo Gallery app created with React.js
+Photo Gallery app with masonry layout and gallery pagination. Created using ReactJS, Material UI and Unsplash images API.
 
 ## Live Demo
 
-https://dycodes.github.io/photo-gallery-reactjs/
+https://photo-gallery-js.netlify.app/
 
 ## Screenshot
 
@@ -26,7 +26,6 @@ https://dycodes.github.io/photo-gallery-reactjs/
 <p align="left">
 <a href="https://www.yusufdaudu.tech/"><img alt="Website" src="https://img.shields.io/badge/Website-www.yusufdaudu.tech-blue?style=flat-square&logo=google-chrome"></a>
 <a href="https://www.linkedin.com/in/dycodes/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Yusuf%20Daudu-blue?style=flat-square&logo=linkedin"></a>
-<a href="https://www.instagram.com/dycodes/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-dyCodes-blue?style=flat-square&logo=instagram"></a>
 </p>
 
 <br />
